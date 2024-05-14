@@ -1,1 +1,1 @@
-# TC1030-Programaci-n-Orientada-a-Objetos-2-C-
+# TC1030 Programacion Orientada a Objetos 2
