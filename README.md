@@ -17,7 +17,6 @@ Los grupos están asociados a un profesor, en los grupos se permitirá el regist
 En los salones se  podrá agregar material escolar.
 
 ## Diagrama UML
-
-
+![Escuela](https://github.com/FernandaA01711870/TC1030-Programaci-n-Orientada-a-Objetos-2-C-/assets/142357001/9f1516f1-169c-4df5-9322-d6ca9f905f68)
 
 ## Consideraciones 
