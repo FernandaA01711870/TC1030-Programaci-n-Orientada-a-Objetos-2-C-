@@ -20,3 +20,13 @@ En los salones se  podrá agregar material escolar.
 ![Escuela](https://github.com/FernandaA01711870/TC1030-Programaci-n-Orientada-a-Objetos-2-C-/assets/142357001/9f1516f1-169c-4df5-9322-d6ca9f905f68)
 
 ## Consideraciones 
+
+El programa fue desarrollado en C++ bajo el criterio de 'Standard C++ Library' y corre en todos los sistemas operativos.
+
+El programa solo corre en consola. 
+Para compilar el programa es necesario tener todos los archivos de nuestras clases y el main en una misma carpeta y especificar la ruta en nuestra consola.
+
+Para compilar el programa con G++:
+"g++ persona.h profesor.h alumno.h grupo.h salon.h materialEscolar.h escuela.cpp -o Escuela "
+
+Para correr el archivo en consola escribimos "Escuela.exe" en Windows o "./Escuela" en Linux. 
