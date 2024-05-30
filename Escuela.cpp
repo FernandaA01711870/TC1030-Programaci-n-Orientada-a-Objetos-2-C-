@@ -19,7 +19,7 @@ int main(){
 	//Objeto tipo grupo
 	Grupo grupo1("Segundo grado",profesorAlberto);
 	//Agregamos un alumno al grupo
-	grupo1.agregarAlumnos("Luisa","Valdez",7,"Cruz #2","2234565424","luisa@escuela","Señora Maria","A01817797");
+	grupo1.agregarAlumnos("Luisa","Valdez",7,"Cruz #2","2234565424","luisa@escuela","SeÃ±ora Maria","A01817797");
 	
 	
 	//Objeto de tipo salon
