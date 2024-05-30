@@ -76,7 +76,7 @@ void Grupo::CrearGrupo(){
 	capacidadAlumnos++;
 	personas[capacidadAlumnos] = new Alumno("Susi","Vega",7,"Ferrocarril #45","44282710","susanita@correo.com","Mama de susi","A01490163");
 	capacidadAlumnos++;
-		personas[capacidadAlumnos] = new Alumno("Nicole","Uriostegui",7,"Zacatecas #45","4451070012","nicole@correo.com","Papa de Nicole","A01711802");
+	personas[capacidadAlumnos] = new Alumno("Nicole","Uriostegui",7,"Zacatecas #45","4451070012","nicole@correo.com","Papa de Nicole","A01711802");
 	capacidadAlumnos++;
 }
 

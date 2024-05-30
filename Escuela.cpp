@@ -21,17 +21,18 @@ int main(){
 	//Objeto de tipo grupo
 	Grupo grupo1("Segundo grado");
 	grupo1.CrearGrupo(); //Metodo para crear un grupo con personas dentro
-	grupo1.agregarAlumnos("Jonny","Velasquez",12,"Rio verde #3","4423567345","jonny@escuela.com","Senor Juan","A01822453");
-	grupo1.crearProfesor("Profesor Alberto","Ruiz",48,"Av de la luz","4467543456","profAlberto@escuela.com","Matematicas",12);
 	
 	cout<<endl<< "-----Lista de grupos-----" <<endl<<endl;
 	grupo1.imprimirDatos();
 	
 	cout<<endl<< "-----Lista de alumnos-----" <<endl<<endl;
+	grupo1.agregarAlumnos("Jonny","Velasquez",12,"Rio verde #3","4423567345","jonny@escuela.com","Senor Juan","A01822453");
 	grupo1.imprimeAlumnos();
 	
 	cout<<endl<< "-----Lista de profes-----" <<endl<<endl;
+	grupo1.crearProfesor("Profesor Alberto","Ruiz",48,"Av de la luz","4467543456","profAlberto@escuela.com","Matematicas",12);
 	grupo1.imprimeProfe();
+	
 
 	//Objeto de tipo salon
 	Salon salon1(123,41,grupo1);

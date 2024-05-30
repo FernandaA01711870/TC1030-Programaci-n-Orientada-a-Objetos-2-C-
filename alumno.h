@@ -81,9 +81,8 @@ void Alumno::calificar(){
 	float calificacionesDefault[7] = {10,9.0,8.8,7.4,8.9,9.9,5.7};
 	for(int i = 0;i<7;i++){
 		calificaciones[i] = calificacionesDefault[i];
-	}
-	
-    promedio = calcularPromedio();	
+	}	
+	promedio = calcularPromedio();
 }
 
 //Metodo para mostrar la infromacion del alumno 
@@ -103,7 +102,15 @@ void Alumno::mostrarInformacion(){
     }
     cout << endl;
     
-    cout << "Promedio de calificaciones: " << promedio << endl<< endl;
+    cout << "Promedio de calificaciones: " << promedio <<endl;
+    
+	if(promedio > 7){
+		cout << "El alumno aprobo" << endl<<endl;
+	}else{
+		cout << "El alumno reprobo" << endl<<endl;
+	}
+    	
+    
 }
 
 
