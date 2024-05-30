@@ -12,7 +12,7 @@ class Profesor: public Persona{ //Profesor es clase hija de Persona
 		float calificaciones[7];
 	//Metodos
 	public:
-		//Constructores
+		//Constructores -> sobrecarga de constructores
 		Profesor();
 		Profesor(string,string,int,string,string,string,string,int);
 		//setters
@@ -22,10 +22,10 @@ class Profesor: public Persona{ //Profesor es clase hija de Persona
 		string getEspecialidad();
 		int getMatrias();
 		
-		//Metodo mostrar -> sobre escritura 
+		//Metodos para polimorfismo
+		void calificar();
 		void mostrarInformacion();
-		
-		//Metodo calificar -> polimorfismo
+	
 
 };
 
@@ -64,8 +64,19 @@ int Profesor::getMatrias(){
 	return materias;
 }
 
-//Metodo mostrar informacion -> sobre escritura
+//Metodos para polimorfismo
 
+
+//Metodo calificar
+void Profesor::calificar(){
+	float calificacionesDefault[7] = {10,9.0,8.8,7.4,8.9,9.9,5.7};
+	for(int i = 0;i<7;i++){
+		calificaciones[i] = calificacionesDefault[i];
+	}
+	
+}
+
+//Metodo mostrar informacion del profesor
 void Profesor::mostrarInformacion(){
 	cout <<"Nombre del profesor: "<< nombre <<endl;
 	cout <<"Apellido: "<< apellido <<endl;
@@ -75,6 +86,14 @@ void Profesor::mostrarInformacion(){
 	cout <<"Correo: "<< correo <<endl;
 	cout <<"Especialidad: "<< especialidad <<endl;
 	cout <<"Materias que imparte: "<< materias <<endl;
+	
+    cout << "Calificaciones asignadas: ";
+    for (int i = 0; i < 7; i++) {
+        cout << calificaciones[i] << ", ";
+    }
+    cout << endl;	
 }
+
+
 
 #endif
