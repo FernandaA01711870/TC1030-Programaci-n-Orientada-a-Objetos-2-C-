@@ -20,7 +20,7 @@ En los salones se  podrá agregar material escolar.
 ## Diagrama UML
 Para tener una forma clara de como funcionara el programa se ha creado un diagrama UML que nos permite visualizar la relación que habrá entre las clases, que métodos se usaran en cada una y como se comunicaran entre ellas.
 
-![Escuela (1)](https://private-user-images.githubusercontent.com/142357001/333023272-a32ccfc2-ac8e-4eeb-b1c5-da9614401b55.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTY0MzUzMDksIm5iZiI6MTcxNjQzNTAwOSwicGF0aCI6Ii8xNDIzNTcwMDEvMzMzMDIzMjcyLWEzMmNjZmMyLWFjOGUtNGVlYi1iMWM1LWRhOTYxNDQwMWI1NS5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwNTIzJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDUyM1QwMzMwMDlaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT02ZDM1OTlmODY3ODY0ODkyYjkxOTc4YWI0YTMzYmFlZDg1NDMyMTA4NjAzZWI1NjNhM2ZlMzQwM2JmOTNlMzhjJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.jOJ_2276Yb8fbe1SdDvUr7rCqA-xaLuyEYstpNSGbyQ)
+![Escuela](https://github.com/FernandaA01711870/TC1030-Programaci-n-Orientada-a-Objetos-2-C-/assets/142357001/e6589476-4593-4e70-af7b-882ed41cf828)
 
 
 ## Consideraciones 
