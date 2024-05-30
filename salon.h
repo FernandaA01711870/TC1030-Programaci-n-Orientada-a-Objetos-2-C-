@@ -16,7 +16,7 @@ class Salon{
 		
 	//Metodos
 	public:
-		//Constructores
+		//Constructores -> sobrecarga de constructores
 		Salon();
 		Salon(int,int,Grupo);
 		//Setters
@@ -83,7 +83,7 @@ void Salon::agregarMaterial(MaterialEscolar material){
 void Salon::imprimirDatos(){
 
 	cout << "Clave del salon: " << clave <<endl;
-	cout << "Capacidad del salon: " << capacidad <<" personas"<<endl;
+	cout << "Capacidad del salon: " << capacidad << " personas"<<endl;
 	cout << "Grupo que ocupa el salon: " << grupo.getGrado() <<endl<<endl;
 	cout << "*** Materiales dentro del salon ***" <<endl<<endl;
 	for(size_t i = 0; i <materiales.size(); i++){

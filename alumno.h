@@ -9,9 +9,10 @@ class Alumno: public Persona{ //Alumno es clase hija de Persona
 		string tutor;
 		string matricula;
 		float calificaciones[7];
+		int promedio;
 	//Metodos
 	public:
-		//Constructores
+		//Constructores -> sobrecarga de constructores
 		Alumno();
 		Alumno(string,string,int,string,string,string,string,string);
 		//Setters
@@ -20,16 +21,19 @@ class Alumno: public Persona{ //Alumno es clase hija de Persona
 		//Getters
 		string getTutor();
 		string getMatricula();
-		
-		void mostrarInformacion(); //Sobre escrituta de metodo
-		
-		//Falta agregar calficar() -> polimorfismo
+		//Metodo para calcular promedio
+		int calcularPromedio();
+		//Polimorfismo
+		void mostrarInformacion();
+		void calificar();
+	
 };
 
 //Constructor por default
 Alumno::Alumno(){
 	tutor = "";
 	matricula = "";
+	promedio = 0;
 }
 
 //Constructor con parametros, extiende al constructor de Persona
@@ -38,6 +42,7 @@ Alumno::Alumno(string _nombre,string _apellido,int _edad,string _direccion,strin
 			
 	tutor = _tutor;
 	matricula = _matricula;
+	promedio = 0;
 }
 
 //setters
@@ -59,7 +64,29 @@ string Alumno::getMatricula(){
 	return matricula;
 }
 
-//Metodo para mostrar la infromacion del alumno -> sobre escritura 
+//Calcular promedio
+int Alumno::calcularPromedio(){
+	int suma = 0;
+	
+	for(int i=0;i<7;i++){
+		suma += calificaciones[i];
+	}
+	return suma/7;
+}
+
+//Metodos polimosrfismo
+
+//Metodo calificar
+void Alumno::calificar(){
+	float calificacionesDefault[7] = {10,9.0,8.8,7.4,8.9,9.9,5.7};
+	for(int i = 0;i<7;i++){
+		calificaciones[i] = calificacionesDefault[i];
+	}
+	
+    promedio = calcularPromedio();	
+}
+
+//Metodo para mostrar la infromacion del alumno 
 void Alumno::mostrarInformacion(){
 	cout <<"Nombre del alumno: "<< nombre <<endl;
 	cout <<"Apellido: "<< apellido <<endl;
@@ -69,5 +96,15 @@ void Alumno::mostrarInformacion(){
 	cout <<"Correo: "<< correo <<endl;
 	cout <<"Tutor: "<< tutor <<endl;
 	cout <<"Matricula: "<< matricula <<endl;
+	
+	cout << "Calificaciones asignadas: ";
+    for (int i = 0; i < 7; i++) {
+        cout << calificaciones[i] << ", ";
+    }
+    cout << endl;
+    
+    cout << "Promedio de calificaciones: " << promedio << endl<< endl;
 }
+
+
 #endif

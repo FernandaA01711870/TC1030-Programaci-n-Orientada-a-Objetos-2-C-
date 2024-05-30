@@ -17,7 +17,7 @@ class Persona{ //Clase padre
 		
 	//Metodos
 	public:
-		//Constructores
+		//Constructores -> sobrecarga de constructores
 		Persona();
 		Persona(string,string,int,string,string,string);
 		//Setters
@@ -35,11 +35,9 @@ class Persona{ //Clase padre
 		string getTelefono();
 		string getCorreo();
 		
-		void mostrarInformacion(); //sobreescritura
-		
-		//Metodo calificar polimorfismo
-
-		
+		//polimorfismo
+		virtual void mostrarInformacion() = 0; 
+		virtual void calificar() = 0; 		
 };
 
 //Constructor por default
@@ -107,7 +105,5 @@ string Persona::getTelefono(){
 string Persona::getCorreo(){
 	return correo;
 }
-
-
 
 #endif
