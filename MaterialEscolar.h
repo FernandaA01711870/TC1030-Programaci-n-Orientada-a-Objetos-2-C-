@@ -13,7 +13,7 @@ class MaterialEscolar{
 		int lockers;
 	//Metodos
 	public:
-		//Constructores
+		//Constructores -> sobrecarga de constructores
 		MaterialEscolar();
 		MaterialEscolar(int,int,int,int,int);
 		//Setters
