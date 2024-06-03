@@ -25,8 +25,13 @@ De igual forma los grupos tienen un cupo limitado de 41 personas por grupo, si s
 ## Diagrama UML
 Para tener una forma clara de como funcionara el programa se ha creado un diagrama UML que nos permite visualizar la relación que habrá entre las clases, que métodos se usaran en cada una y como se comunicaran entre ellas.
 
-![Escuela](https://github.com/FernandaA01711870/TC1030-Programaci-n-Orientada-a-Objetos-2-C-/assets/142357001/e6589476-4593-4e70-af7b-882ed41cf828)
+## Documentación
+En el proyecto de utilizaron esencialmente 2 bibliotecas:
+iostream : Biblioteca estándar de C++ que nos permite manipular la entrada y salida de datos. Con esta biblioteca podemos varios objetos que nos permiten gestionar la entrada desde teclado y la salida desde pantalla, objetos como: 'cin', 'cout', 'cerr', 'clog'. 
+https://cplusplus.com/reference/iostream/ 
 
+vector : Biblioteca estándar de C++ que nos permite crear y trabajar con vectores o arreglos dinámicos 
+https://cplusplus.com/reference/vector/
 
 ## Consideraciones 
 
@@ -38,4 +43,4 @@ Para compilar el programa es necesario tener todos los archivos de nuestras clas
 Para compilar el programa con G++:
 "g++ persona.h profesor.h alumno.h grupo.h salon.h materialEscolar.h escuela.cpp -o Escuela "
 
-Para correr el archivo en consola escribimos "Escuela.exe" en Windows o "./Escuela" en Linux. 
+Para correr el archivo en consola escribimos "Escuela.exe" en Windows o "./Escuela" en Linux.
