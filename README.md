@@ -25,6 +25,8 @@ De igual forma los grupos tienen un cupo limitado de 41 personas por grupo, si s
 ## Diagrama UML
 Para tener una forma clara de como funcionara el programa se ha creado un diagrama UML que nos permite visualizar la relación que habrá entre las clases, que métodos se usaran en cada una y como se comunicaran entre ellas.
 
+![Escuela](https://github.com/FernandaA01711870/Programacion-Orientada-a-Objetos-C-/assets/142357001/0f32485e-bc25-450c-9491-ca031b833462)
+
 ## Documentación
 En el proyecto de utilizaron esencialmente 2 bibliotecas:
 iostream : Biblioteca estándar de C++ que nos permite manipular la entrada y salida de datos. Con esta biblioteca podemos varios objetos que nos permiten gestionar la entrada desde teclado y la salida desde pantalla, objetos como: 'cin', 'cout', 'cerr', 'clog'. 
