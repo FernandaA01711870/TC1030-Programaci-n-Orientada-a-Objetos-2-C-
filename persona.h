@@ -1,10 +1,21 @@
+/*
+ * Proyecto Sistema de gestión de una escuela
+ * Luisa Fernanda Valdez Guillén
+ * A01711870
+ * 6/6/2024
+ * Esta clase define un objeto de tipo Persona. Esta clase
+ * es la clase 'padre' de las clases Alumno y Profesor
+ *
+ */
+
 #ifndef _PERSONA_H_
 #define _PERSONA_H_
 
 #include<iostream>
 using namespace std;
 
-class Persona{ //Clase padre
+//Declaración de la clase Persona que es abstracta
+class Persona{
 	
 	//Atributos
 	protected:
@@ -18,8 +29,8 @@ class Persona{ //Clase padre
 	//Metodos
 	public:
 		//Constructores -> sobrecarga de constructores
-		Persona();
-		Persona(string,string,int,string,string,string);
+		Persona(); //Constructor por default
+		Persona(string,string,int,string,string,string); //Constructor con parametros
 		//Setters
 		void setNombre(string);
 		void setApellido(string);
@@ -34,13 +45,13 @@ class Persona{ //Clase padre
 		string getDireccion();
 		string getTelefono();
 		string getCorreo();
-		
-		//polimorfismo
-		virtual void mostrarInformacion() = 0; 
-		virtual void calificar() = 0; 		
+		//Polimorfismo
+		//Capacidad que tienen los objetos para actuar de manera diferente ante el mismo mensaje.
+		virtual void mostrarInformacion() = 0; //método abstracto
+		virtual void calificar() = 0; //método abstracto		
 };
 
-//Constructor por default
+//Declaracion del constructor por default
 Persona::Persona(){
 	nombre = "";
 	apellido = "";
@@ -50,7 +61,7 @@ Persona::Persona(){
 	correo = "";
 }
 
-//Constructor con parametros
+//Declaración del constructor con parametros
 Persona::Persona(string _nombre,string _apellido,int _edad,string _direccion,string _telefono,string _correo){
 	nombre = _nombre;
 	apellido = _apellido;
@@ -60,7 +71,7 @@ Persona::Persona(string _nombre,string _apellido,int _edad,string _direccion,str
 	correo = _correo;
 }
 
-//setters 
+//Setters 
 void Persona::setNombre(string _nombre){
 	nombre = _nombre;
 }

@@ -1,3 +1,12 @@
+/*
+ * Proyecto Sistema de gestión de una escuela
+ * Luisa Fernanda Valdez Guillén
+ * A01711870
+ * 6/6/2024
+ * Esta clase define un objeto de tipo Salon que sera ocupado por un grupo
+ *
+ */
+
 #ifndef _SALON_H_
 #define _SALON_H_
 
@@ -6,6 +15,7 @@
 #include "grupo.h"
 #include "MaterialEscolar.h"
 
+//Declaración de la clase Salon
 class Salon{
 	//Atributos
 	private:
@@ -17,8 +27,8 @@ class Salon{
 	//Metodos
 	public:
 		//Constructores -> sobrecarga de constructores
-		Salon();
-		Salon(int,int,Grupo);
+		Salon(); //Constructor por default
+		Salon(int,int,Grupo); //Constructor con parametros
 		//Setters
 		void setClave(int);
 		void setCapacidad(int);
@@ -73,13 +83,27 @@ Grupo Salon::getGrupo(){
 	return grupo;
 }
 
-//Agrgar material -> agregación
-
+/*
+* Funcion 'agregarAlumnos()' -> agrega un objeto de tipo MaterialEscolar al vector 
+* de materiales
+*
+* @param objeto de tipo MaterialEscolar
+*
+* @return No retorna nada
+*
+*/
 void Salon::agregarMaterial(MaterialEscolar material){
 	materiales.push_back(material);
 }
 
-//Metodo imprimir
+/*
+* Funcion 'imprimirDatos()' -> imprime la informacion del salon, nos permite visualizar
+* con que material esta equipado y a que grupo pertenece
+*
+* @param No recibe parámetros
+* @return No retorna nada
+*
+*/
 void Salon::imprimirDatos(){
 
 	cout << "Clave del salon: " << clave <<endl;

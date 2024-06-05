@@ -1,8 +1,18 @@
+/*
+ * Proyecto Sistema de gestión de una escuela
+ * Luisa Fernanda Valdez Guillén
+ * A01711870
+ * 6/6/2024
+ * Esta clase define un objeto de tipo MaterialEscolar
+ *
+ */
+
 #ifndef MATERIALESCOLAR_H_
 #define MATERIALESCOLAR_H_
 
 using namespace std;
 
+//Declaración de la clase MaterialEscolar
 class MaterialEscolar{
 	//Atributos
 	private:
@@ -14,8 +24,8 @@ class MaterialEscolar{
 	//Metodos
 	public:
 		//Constructores -> sobrecarga de constructores
-		MaterialEscolar();
-		MaterialEscolar(int,int,int,int,int);
+		MaterialEscolar(); //Constructor por default
+		MaterialEscolar(int,int,int,int,int); //Constructor con parametros
 		//Setters
 		void setMesas(int);
 		void setSillas(int);

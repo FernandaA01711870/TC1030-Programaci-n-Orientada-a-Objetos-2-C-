@@ -1,8 +1,19 @@
+/*
+ * Proyecto Sistema de gestión de una escuela
+ * Luisa Fernanda Valdez Guillén
+ * A01711870
+ * 6/6/2024
+ * Esta clase es hija de persona, difine un objeto de tipo Alumno y calcula su promedio
+ * permitiendo que el alumno sepa si aprobo o no la materia
+ *
+ */
+
 #ifndef _ALUMNO_H_
 #define _ALUMNO_H_
 
 #include "persona.h"
 
+//Declaración de la clase Alumno
 class Alumno: public Persona{ //Alumno es clase hija de Persona
 	//Atributos
 	private:
@@ -13,8 +24,8 @@ class Alumno: public Persona{ //Alumno es clase hija de Persona
 	//Metodos
 	public:
 		//Constructores -> sobrecarga de constructores
-		Alumno();
-		Alumno(string,string,int,string,string,string,string,string);
+		Alumno(); //Constructor por default
+		Alumno(string,string,int,string,string,string,string,string); //Constructor por parametros
 		//Setters
 		void setTutor(string);
 		void setMatricula(string);
@@ -23,10 +34,9 @@ class Alumno: public Persona{ //Alumno es clase hija de Persona
 		string getMatricula();
 		//Metodo para calcular promedio
 		int calcularPromedio();
-		//Polimorfismo
+		//Metodos para polimorfismo que fueron sobreescritos desde la clase Persona
 		void mostrarInformacion();
 		void calificar();
-	
 };
 
 //Constructor por default
@@ -64,7 +74,13 @@ string Alumno::getMatricula(){
 	return matricula;
 }
 
-//Calcular promedio
+/*
+* Función 'calcularPromedio()' -> Calacula el promedio de las calficaciónes de un alumno
+*
+* @param No recibe parámetros
+* @return int -> suma de las calificaciónes dividida entre el total de calificaciónes
+*
+*/
 int Alumno::calcularPromedio(){
 	int suma = 0;
 	
@@ -74,9 +90,15 @@ int Alumno::calcularPromedio(){
 	return suma/7;
 }
 
-//Metodos polimosrfismo
+//Metodo para polimosrfismo
 
-//Metodo calificar
+/*
+* Función 'calificar()' -> Asigna calificaciones al alumno y permite obtner su promedio
+*
+* @param No recibe parametros
+* @return No retorna nada
+*
+*/
 void Alumno::calificar(){
 	float calificacionesDefault[7] = {10,9.0,8.8,7.4,8.9,9.9,5.7};
 	for(int i = 0;i<7;i++){
@@ -85,7 +107,14 @@ void Alumno::calificar(){
 	promedio = calcularPromedio();
 }
 
-//Metodo para mostrar la infromacion del alumno 
+/*
+* Funcion 'mostrarInformacion()' -> Nos muestra la informacion del alumnos, nos permite visualizar las calificaciones asignadas y su promedio,
+* en base al promedio obtenido nos permitira saber si el alumno aprobo o reprobo el curso
+*
+* @param No recibe parametros
+* @return No retorna nada
+*
+*/
 void Alumno::mostrarInformacion(){
 	cout <<"Nombre del alumno: "<< nombre <<endl;
 	cout <<"Apellido: "<< apellido <<endl;
@@ -109,8 +138,6 @@ void Alumno::mostrarInformacion(){
 	}else{
 		cout << "El alumno reprobo" << endl<<endl;
 	}
-    	
-    
 }
 
 

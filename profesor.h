@@ -1,8 +1,18 @@
+/*
+ * Proyecto Sistema de gestión de una escuela
+ * Luisa Fernanda Valdez Guillén
+ * A01711870
+ * 6/6/2024
+ * Esta clase es hija de persona, difine un objeto de tipo Profesor y 
+ * asigna las calificaciones de los alumnos
+ */
+
 #ifndef _PROFESOR_H_
 #define _PROFESOR_H_
 
 #include "persona.h"
 
+//Declaración de la clase Profesor
 class Profesor: public Persona{ //Profesor es clase hija de Persona
 
 	//Atributos
@@ -13,8 +23,8 @@ class Profesor: public Persona{ //Profesor es clase hija de Persona
 	//Metodos
 	public:
 		//Constructores -> sobrecarga de constructores
-		Profesor();
-		Profesor(string,string,int,string,string,string,string,int);
+		Profesor(); //Constructor por default
+		Profesor(string,string,int,string,string,string,string,int); //Constructor con parametros
 		//setters
 		void setEspecialidad(string);
 		void setMaterias(int);
@@ -22,7 +32,7 @@ class Profesor: public Persona{ //Profesor es clase hija de Persona
 		string getEspecialidad();
 		int getMatrias();
 		
-		//Metodos para polimorfismo
+		//Metodos para polimorfismo que fueron sobreescritos desde la clase Persona
 		void calificar();
 		void mostrarInformacion();
 	
@@ -67,7 +77,13 @@ int Profesor::getMatrias(){
 //Metodos para polimorfismo
 
 
-//Metodo calificar
+/*
+* Función 'calificar()' -> Asigna las calificaciones
+*
+* @param No recibe parametros
+* @return No retorna nada
+*
+*/
 void Profesor::calificar(){
 	float calificacionesDefault[7] = {10,9.0,8.8,7.4,8.9,9.9,5.7};
 	for(int i = 0;i<7;i++){
@@ -76,7 +92,13 @@ void Profesor::calificar(){
 	
 }
 
-//Metodo mostrar informacion del profesor
+/*
+* Funcion 'mostrarInformacion()' -> Nos muestra la informacion del profesor y nos permite visualizar las calificaciones asignadas
+*
+* @param No recibe parametros
+* @return No retorna nada
+*
+*/
 void Profesor::mostrarInformacion(){
 	cout <<"Nombre del profesor: "<< nombre <<endl;
 	cout <<"Apellido: "<< apellido <<endl;

@@ -1,5 +1,16 @@
+/*
+ * Proyecto Escuela main
+ * Luisa Fernanda Valdez Guillén
+ * A01711870
+ * 6/6/2024
+ *
+ * Este es un proyecto para la clase TC1030 Programación Orientado a
+ * Objetos. Es un programa que nos permite gestionar los elementos de una escuela primaria.
+ * Captura los alumnos y profesores petenecientes a un grupo. 
+ * A cada grupo se le asigna un salon, el salon se puede equipar con materiales escolares.
+ */
+
 #include<iostream>
-#include<stdlib.h>
 
 #include "persona.h"
 #include "profesor.h"
