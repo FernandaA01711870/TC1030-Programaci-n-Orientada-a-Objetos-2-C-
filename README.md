@@ -25,7 +25,7 @@ De igual forma los grupos tienen un cupo limitado de 41 personas por grupo, si s
 ## Diagrama UML
 Para tener una forma clara de como funcionara el programa se ha creado un diagrama UML que nos permite visualizar la relación que habrá entre las clases, que métodos se usaran en cada una y como se comunicaran entre ellas.
 
-![Escuela](https://github.com/FernandaA01711870/Programacion-Orientada-a-Objetos-C-/assets/142357001/0f32485e-bc25-450c-9491-ca031b833462)
+![Escuela](https://github.com/FernandaA01711870/TC1030-Programaci-n-Orientada-a-Objetos-2-C-/assets/142357001/9f4f616d-32e8-471e-855b-b0026da73798)
 
 ## Documentación
 En el proyecto de utilizaron esencialmente 2 bibliotecas:
