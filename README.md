@@ -52,3 +52,10 @@ Para compilar el programa con G++:
 "g++ persona.h profesor.h alumno.h grupo.h salon.h materialEscolar.h escuela.cpp -o Escuela "
 
 Para correr el archivo en consola escribimos "Escuela.exe" en Windows o "./Escuela" en Linux.
+
+## Correcciones y reevaluación
+En la primera entrega se corrigieron los casos en los que el programa dejaría de funcionar y se agrego al github en el apartado de casos de error.
+
+Para la segunda entrega se marco como incorrecto la sobrecarga de métodos, sin embargo ese punto ya estaba implementado como sobrecarga de constructores en todas las clases, no se modifico ni se agrego nada al código en ese aspecto sin embargo se menciona aquí para tenerlo en consideración para la reevaluación.
+
+Para el avance 4 se reviso en clase y se agrego funcionalidad al programa agregando un menú interactivo para que el usuario haga diferentes pruebas.
