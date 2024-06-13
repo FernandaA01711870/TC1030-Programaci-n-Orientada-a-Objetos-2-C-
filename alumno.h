@@ -3,7 +3,8 @@
  * Luisa Fernanda Valdez Guillén
  * A01711870
  * 6/6/2024
- * Esta clase es hija de persona, difine un objeto de tipo Alumno y calcula su promedio
+ * Esta clase es hija de persona. 
+ * Define un objeto de tipo Alumno y calcula su promedio
  * permitiendo que el alumno sepa si aprobo o no la materia
  *
  */
@@ -24,8 +25,11 @@ class Alumno: public Persona{ //Alumno es clase hija de Persona
 	//Metodos
 	public:
 		//Constructores -> sobrecarga de constructores
-		Alumno(); //Constructor por default
-		Alumno(string,string,int,string,string,string,string,string); //Constructor por parametros
+		
+		//Constructor por default
+		Alumno(); 
+		//Constructor por parametros
+		Alumno(string,string,int,string,string,string,string,string); 
 		//Setters
 		void setTutor(string);
 		void setMatricula(string);
@@ -34,22 +38,43 @@ class Alumno: public Persona{ //Alumno es clase hija de Persona
 		string getMatricula();
 		//Metodo para calcular promedio
 		int calcularPromedio();
-		//Metodos para polimorfismo que fueron sobreescritos desde la clase Persona
+		/*
+		* Metodos para polimorfismo 
+		* fueron sobreescritos desde la clase Persona
+		*/
 		void mostrarInformacion();
 		void calificar();
 };
 
-//Constructor por default
+/*
+*
+* Constructor por default de la clase Alumno
+*
+* @param no recibe parametros
+*
+* @return no retorna nada
+*
+*/
 Alumno::Alumno(){
+	tipo = "alumno";
 	tutor = "";
 	matricula = "";
 	promedio = 0;
 }
 
-//Constructor con parametros, extiende al constructor de Persona
-Alumno::Alumno(string _nombre,string _apellido,int _edad,string _direccion,string _telefono,string _correo,string _tutor,string _matricula):
-		Persona(_nombre,_apellido,_edad,_direccion,_telefono,_correo){
-			
+/*
+*
+* Constructor por parametros de la clase Alumno
+* extiende al constructor de la clase Persona
+*
+* @param string -> tutor, matricula
+*
+* @return no retorna nada
+*
+*/
+Alumno::Alumno(string _nombre,string _apellido,int _edad,string _direccion,
+		string _telefono,string _correo,string _tutor,string _matricula):
+		Persona(_nombre,_apellido,_edad,_direccion,_telefono,_correo, "alumno"){
 	tutor = _tutor;
 	matricula = _matricula;
 	promedio = 0;
@@ -75,10 +100,11 @@ string Alumno::getMatricula(){
 }
 
 /*
-* Función 'calcularPromedio()' -> Calacula el promedio de las calficaciónes de un alumno
+* Función 'calcularPromedio()' -> Calacula el promedio de las calficaciónes
 *
 * @param No recibe parámetros
-* @return int -> suma de las calificaciónes dividida entre el total de calificaciónes
+* @return int -> suma de las calificaciónes 
+* dividida entre el total de calificaciónes
 *
 */
 int Alumno::calcularPromedio(){
@@ -93,7 +119,8 @@ int Alumno::calcularPromedio(){
 //Metodo para polimosrfismo
 
 /*
-* Función 'calificar()' -> Asigna calificaciones al alumno y permite obtner su promedio
+* Función 'calificar()' -> Asigna calificaciones al alumno
+* y permite obtner su promedio
 *
 * @param No recibe parametros
 * @return No retorna nada
@@ -108,8 +135,9 @@ void Alumno::calificar(){
 }
 
 /*
-* Funcion 'mostrarInformacion()' -> Nos muestra la informacion del alumnos, nos permite visualizar las calificaciones asignadas y su promedio,
-* en base al promedio obtenido nos permitira saber si el alumno aprobo o reprobo el curso
+* Funcion 'mostrarInformacion()' -> Nos muestra la informacion del alumnos, 
+* nos permite visualizar las calificaciones asignadas y su promedio,
+* en base al promedio obtenido permite saber si un alumno aprobo o reprobo el curso
 *
 * @param No recibe parametros
 * @return No retorna nada
@@ -139,6 +167,5 @@ void Alumno::mostrarInformacion(){
 		cout << "El alumno reprobo" << endl<<endl;
 	}
 }
-
 
 #endif

@@ -24,8 +24,11 @@ class MaterialEscolar{
 	//Metodos
 	public:
 		//Constructores -> sobrecarga de constructores
-		MaterialEscolar(); //Constructor por default
-		MaterialEscolar(int,int,int,int,int); //Constructor con parametros
+		
+		//Constructor por default
+		MaterialEscolar(); 
+		//Constructor con parametros
+		MaterialEscolar(int,int,int,int,int); 
 		//Setters
 		void setMesas(int);
 		void setSillas(int);
@@ -40,7 +43,15 @@ class MaterialEscolar{
 		int getLockers();
 };
 
-//Constructor por default
+/*
+*
+* Constructor por default de la clase Material Escolar
+*
+* @param no recibe parametros
+*
+* @return no retorna nada
+*
+*/
 MaterialEscolar::MaterialEscolar(){
 	mesas = 0;
 	sillas = 0;
@@ -49,8 +60,18 @@ MaterialEscolar::MaterialEscolar(){
 	lockers = 0;
 }
 
-//Constructor por parametros
-MaterialEscolar::MaterialEscolar(int _mesas,int _sillas,int _proyectores,int _pizarrones,int _lockers){
+/*
+*
+* Constructor por default de la clase Mterial Escolar
+*
+* @param int -> mesas, sillas, proyectores, pizarrones, lockers
+*
+* @return no retorna nada
+*
+*/
+MaterialEscolar::MaterialEscolar(int _mesas,int _sillas,
+    int _proyectores,int _pizarrones,int _lockers){
+    	
 	mesas = _mesas;
 	sillas = _sillas;
 	proyectores = _proyectores;
@@ -101,6 +122,5 @@ int MaterialEscolar::getPizarrones(){
 int MaterialEscolar::getLockers(){
 	return lockers;
 }
-
 
 #endif

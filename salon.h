@@ -27,8 +27,11 @@ class Salon{
 	//Metodos
 	public:
 		//Constructores -> sobrecarga de constructores
-		Salon(); //Constructor por default
-		Salon(int,int,Grupo); //Constructor con parametros
+		
+		//Constructor por default
+		Salon(); 
+		//Constructor con parametros
+		Salon(int,int,Grupo); 
 		//Setters
 		void setClave(int);
 		void setCapacidad(int);
@@ -43,13 +46,30 @@ class Salon{
 		void imprimirDatos();
 };
 
-//Constructor por default
+/*
+*
+* Constructor por default de la clase Salon
+*
+* @param no recibe parametros
+*
+* @return no retorna nada
+*
+*/
 Salon::Salon(){
 	clave = 0;
 	capacidad = 0;
 }
 
-//Constructor por parametros
+/*
+*
+* Constructor por default de la clase Salon
+*
+* @param int -> clave capacidad
+  objeto de tipo Grupo -> grupo
+*
+* @return no retorna nada
+*
+*/
 Salon::Salon(int _clave,int _capacidad,Grupo _grupo){
 	clave = _clave;
 	capacidad = _capacidad;
@@ -97,8 +117,8 @@ void Salon::agregarMaterial(MaterialEscolar material){
 }
 
 /*
-* Funcion 'imprimirDatos()' -> imprime la informacion del salon, nos permite visualizar
-* con que material esta equipado y a que grupo pertenece
+* Funcion 'imprimirDatos()' -> imprime la informacion del salon, 
+* nos permite visualizar con que material esta equipado y a que grupo pertenece
 *
 * @param No recibe parámetros
 * @return No retorna nada
@@ -106,10 +126,11 @@ void Salon::agregarMaterial(MaterialEscolar material){
 */
 void Salon::imprimirDatos(){
 
+	cout << "**** Salon ****"<<endl<<endl;
 	cout << "Clave del salon: " << clave <<endl;
 	cout << "Capacidad del salon: " << capacidad << " personas"<<endl;
 	cout << "Grupo que ocupa el salon: " << grupo.getGrado() <<endl<<endl;
-	cout << "*** Materiales dentro del salon ***" <<endl<<endl;
+	cout << "Materiales dentro del salon" <<endl<<endl;
 	for(size_t i = 0; i <materiales.size(); i++){
 		cout<<"Cantidad de mesas en el salon: " << materiales[i].getMesas() <<endl;
 		cout<<"Cantidad de sillas en el salon: " << materiales[i].getSillas() <<endl;

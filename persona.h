@@ -25,12 +25,17 @@ class Persona{
 		string direccion;
 		string telefono;
 		string correo;
+		string tipo;
 		
 	//Metodos
 	public:
 		//Constructores -> sobrecarga de constructores
-		Persona(); //Constructor por default
-		Persona(string,string,int,string,string,string); //Constructor con parametros
+		
+		//Constructor por default
+		Persona();
+		//Constructor con parametros
+		Persona(string,string,int,string,string,string,string);
+		 
 		//Setters
 		void setNombre(string);
 		void setApellido(string);
@@ -38,6 +43,7 @@ class Persona{
 		void setDireccion(string);
 		void setTelefono(string);
 		void setCorreo(string);
+		void setTipo(string);
 		//Getters
 		string getNombre();
 		string getApellido();
@@ -45,13 +51,26 @@ class Persona{
 		string getDireccion();
 		string getTelefono();
 		string getCorreo();
-		//Polimorfismo
-		//Capacidad que tienen los objetos para actuar de manera diferente ante el mismo mensaje.
+		string getTipo();
+		
+		/*
+		* Polimorfismo
+		* Capacidad que tienen los objetos para actuar de manera 
+		* diferente ante el mismo mensaje.
+		*/
 		virtual void mostrarInformacion() = 0; //método abstracto
 		virtual void calificar() = 0; //método abstracto		
 };
 
-//Declaracion del constructor por default
+/*
+*
+* Constructor por default de la clase Persona
+*
+* @param no recibe parametros
+*
+* @return no retorna nada
+*
+*/
 Persona::Persona(){
 	nombre = "";
 	apellido = "";
@@ -59,16 +78,29 @@ Persona::Persona(){
 	direccion = "";
 	telefono = "";
 	correo = "";
+	tipo = "";
 }
 
-//Declaración del constructor con parametros
-Persona::Persona(string _nombre,string _apellido,int _edad,string _direccion,string _telefono,string _correo){
+/*
+*
+* Constructor por parametros de la clase Persona
+*
+* @param string -> nombre, apellido,  direccion, telefono, correo, tipo
+* int -> edad
+*
+* @return No retorna nada
+*
+*/
+Persona::Persona(string _nombre,string _apellido,int _edad,
+string _direccion,string _telefono,string _correo, string _tipo){
+    	
 	nombre = _nombre;
 	apellido = _apellido;
 	edad = _edad;
 	direccion = _direccion;
 	telefono = _telefono;
 	correo = _correo;
+	tipo = _tipo;
 }
 
 //Setters 
@@ -91,7 +123,9 @@ void Persona::setTelefono(string _telefono){
 void Persona::setCorreo(string _correo){
 	correo = _correo;
 }
-
+void Persona::setTipo(string _tipo){
+	tipo = _tipo;
+}
 //getters
 string Persona::getNombre(){
 	return nombre;
@@ -115,6 +149,10 @@ string Persona::getTelefono(){
 
 string Persona::getCorreo(){
 	return correo;
+}
+
+string Persona::getTipo(){
+	return tipo;
 }
 
 #endif
