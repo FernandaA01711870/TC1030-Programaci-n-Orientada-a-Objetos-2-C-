@@ -6,21 +6,27 @@
 
 El director de una escuela primaria se ha dado cuenta de la necesidad de un sistema de gestión para tener un mejor control sobre los alumnos, profesores, grupos, salones y el material con el que cada salón cuenta.
 
-Es por esto que decidió crear una estructura de clases que le permitirá manejar la organización en la institución, permitiendo el registro de profesores y su vinculación con un grupo, en los grupos solo podrá haber un profesor. De igual forma los grupos están compuestos por alumnos, los alumnos no pueden estar inscritos en la escuela si no son parte de su grupo, solo puede haber 40 alumnos por grupo.
+Es por esto que decidió crear una estructura de clases que le permitirá manejar la organización en la institución, permitiendo el registro de un profesor en un grupo, en los grupos solo podrá haber un profesor. De igual forma los grupos están compuestos por alumnos, los alumnos no pueden estar inscritos en la escuela si no son parte de su grupo, solo puede haber 40 alumnos por grupo.
 
 Cada salón le pertenece a un solo grupo y los salones podrán contar con material escolar como: mesas, sillas, pizarrones, etc.. 
 
 ## Funcionalidad
-El programa permitirá que los profesores asignen calificaciones a sus alumnos, también les permitirá a los alumnos ingresar sus calificaciones y calcular su promedio y a base de este determinar si a probaron la materia o no.
+El programa permitirá que los profesores asignen calificaciones a sus alumnos, también les permitirá a los alumnos ingresar sus calificaciones y calcular su promedio y a base de este determinar si aprobaron la materia o no.
 
-Los grupos están asociados a un profesor, en los grupos se permitirá el registro de alumnos.
+Se podrá consultar la lista de grupos existentes en la escuela así como la lista de salones registrados.
 
-En los salones se  podrá agregar material escolar.
+Se podrán editar los grupos permitiendo el registro de alumnos y de un profesor.
+En los salones se podrá agregar material escolar.
 
 ## Casos de error
-El programa solo admite que en un grupo exista un profesor, si se intenta agregar más de un profesor en los grupos se desplegara un mensaje de error indicándonos que solo puede haber un profesor por grupo.
 
-De igual forma los grupos tienen un cupo limitado de 41 personas por grupo, si se agregan más se desplegara un mensaje indicando que no es posible agregar más personas al grupo.
+El programa solo admite que en un grupo exista un profesor, si se intenta agregar más de un profesor en los grupos se desplegará un mensaje de error indicándonos que solo puede haber un profesor por grupo. 
+
+De igual forma los grupos tienen un cupo limitado de 41 personas por grupo, si se agregan más se desplegará un mensaje indicando que no es posible agregar más personas al grupo. 
+
+Un caso de error bastante importante a tomar en cuenta es el de ingresar correctamente los datos que se nos piden al momento de querer agregar alumnos o querer registrar un profesor en los grupos. Se debe tener mucho cuidado de ingresar el dato esperado, por ejemplo si se pide edad ingresar un número enteró, en el caso del profesor cuando se pide el número de materias que imparte se debe de ingresar un número entero, de no respetarse esto el programa fallará.
+
+De igual forma al agregar material a los salones solo ingresar el numero de materiales, el programa no aceptara strings o algún otro valor.
 
 ## Diagrama UML
 Para tener una forma clara de como funcionara el programa se ha creado un diagrama UML que nos permite visualizar la relación que habrá entre las clases, que métodos se usaran en cada una y como se comunicaran entre ellas.
